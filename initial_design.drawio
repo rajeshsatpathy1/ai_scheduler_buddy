@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" modified="2024-03-26T07:56:29.394Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="ELux_AD7eyMTh_eQMzvS" version="24.1.0" type="device">
+  <diagram name="Page-1" id="7CtWRx-ORb_NWBDsIvep">
+    <mxGraphModel dx="1434" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9zSWER3mHgexDT1V_9mv-7" value="User Inputs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="190" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9zSWER3mHgexDT1V_9mv-8" value="What to learn/do" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9zSWER3mHgexDT1V_9mv-7">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9zSWER3mHgexDT1V_9mv-9" value="Number of hours that can be spared/ contributed" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9zSWER3mHgexDT1V_9mv-7">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9zSWER3mHgexDT1V_9mv-10" value="Current Schedule, etc." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="9zSWER3mHgexDT1V_9mv-7">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9zSWER3mHgexDT1V_9mv-12" value="UI Interface Abstraction with limited prompting control" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9zSWER3mHgexDT1V_9mv-19" value="Output .ics file which can be exported a s a schedule" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9zSWER3mHgexDT1V_9mv-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.979;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="9zSWER3mHgexDT1V_9mv-9" target="9zSWER3mHgexDT1V_9mv-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="410" as="sourcePoint" />
+            <mxPoint x="450" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9zSWER3mHgexDT1V_9mv-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="9zSWER3mHgexDT1V_9mv-12" target="9zSWER3mHgexDT1V_9mv-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="410" as="sourcePoint" />
+            <mxPoint x="450" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
