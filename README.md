@@ -19,3 +19,6 @@ This is especially important to check the feasibility of the project. The major 
 
 ### Future scope
 This can be discussed at a later point.
+
+## How to add in changes?
+To add in any changes, please create a new branch and raise an MR targeted to master. This will help in version control and reduce confusion.
