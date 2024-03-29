@@ -19,3 +19,12 @@ This is especially important to check the feasibility of the project. The major 
 
 ### Future scope
 This can be discussed at a later point.
+
+## MERN stack
+Currently only node and react inits are added.
+
+To run the node app, try `npm start`. This uses nodemon [https://nodemon.io/] which is used to get a more fluid experience when making changes and running the app.
+
+.gitignore is added to control the pushing of node modules and other unnecessary lib files.
+
+The current state of the app allows you to visit http://localhost:3000/api/gemini?prompt=<add_your_prompt> to get a json response. The API key added is from Gemini. Further work needs to be done so that we can add into a function which can call AI chatbot according to our need.
