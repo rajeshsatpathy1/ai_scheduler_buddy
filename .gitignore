@@ -1,0 +1,21 @@
+# AI generated
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# React
+/client/build
+/client/.cache
+/client/public
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# Miscellaneous
+.env
+.DS_Store
+
+# Log files
+*.log
