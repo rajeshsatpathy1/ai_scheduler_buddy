@@ -1,27 +1,21 @@
 import Image from "next/image";
 import PineconeLogo from "../../../public/pinecone.svg";
 import VercelLogo from "../../../public/vercel.svg";
+import aiSchedLogo from "../../../public/schedBuddy.svg"
 
 export default function Header({ className }: { className?: string }) {
   return (
     <header
-      className={`flex items-center justify-center text-gray-200 text-2xl ${className}`}
+      className={`flex items-center text-gray-200 text-2xl ${className}`}
     >
       <Image
-        src={PineconeLogo}
+        src={aiSchedLogo}
         alt="pinecone-logo"
-        width="230"
-        height="50"
+        width="100"
+        height="100"
         className="ml-3"
       />{" "}
-      <div className="text-4xl ml-3 mr-3">+</div>
-      <Image
-        src={VercelLogo}
-        alt="vercel-logo"
-        width="160"
-        height="50"
-        className="mr-3 mt-3"
-      />
+      <div className="text-4xl ml-3 mr-3">Chrono-Companion</div>
     </header>
   );
 }

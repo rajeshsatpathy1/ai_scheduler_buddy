@@ -1,18 +1,24 @@
 export const urls = [{
-  url: "https://e360.yale.edu/digest/indonesia-malaysia-deforestation",
-  title: "Indonesia Deforestation",
+  url: "https://chear.ucsd.edu/blog/scheduled-eating-why-its-beneficial-and-how-to-start",
+  title: "Healthy Eats",
   seeded: false,
   loading: false,
 },
 {
-  url: "https://cleantechnica.com/2023/06/29/solar-82-of-power-capacity-growth-in-india-in-2022/",
-  title: "Solar Power in India",
+  url: "https://www.uaex.uada.edu/counties/garland/news/fcs/2015/Benefits-of-Social-Activity.aspx",
+  title: "Social Activity",
   seeded: false,
   loading: false,
 },
 {
-  url: "https://www.cbssports.com/nba/news/matisse-thybulle-to-stay-with-blazers-who-match-mavericks-three-year-33-million-deal-per-report/",
-  title: "Matisee Thybulle",
+  url: "https://www.healthline.com/health-news/why-evening-might-be-the-best-time-to-exercise#Body-changes-throughout-the-day",
+  title: "Physical Activity",
+  seeded: false,
+  loading: false,
+},
+{
+  url: "https://workweeklunch.com/meal-planning-for-beginners/",
+  title: "Meal Prep",
   seeded: false,
   loading: false,
 }]
