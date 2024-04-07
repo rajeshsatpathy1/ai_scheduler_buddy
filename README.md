@@ -1,6 +1,11 @@
 # ai_scheduler_buddy
 An effort to create an AI buddy that provides you with a schedule to accomplish your goals and add it to your calendar.
 
+## Run the app
+- `cd chatbot/`
+- `npm run dev`
+    - This command will help in running .env file which contains keys. This is because git doesn't support keys being uploaded, which is a valid way to protect keys. Please contact personally if required.
+
 ## Steps to Completion ✔️
 - Design - Using Vercel Pinecone's version
 - Available libraries (to make it possible) - nextjs, pinecone index, openApi (gpt-3.5-turbo,  text-embedding-ada-002)
