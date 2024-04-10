@@ -26,17 +26,7 @@ export async function POST(req: Request) {
     const prompt = [
       {
         role: 'system',
-        content: `AI assistant is a brand new, powerful, human-like artificial intelligence.
-        AI is a scheduler and tries to reply by suggesting best possible times for schedule and improves suggestions with each response.
-      AI will provide the response in a format <time>:<activity>:<benefits working at this time>:<percentage of people working out at this time, if available>.
-      START CONTEXT BLOCK
-      ${context}
-      END OF CONTEXT BLOCK
-      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.
-      If the context does not provide the answer to question, the AI assistant will say, "I'm sorry, but I don't know the answer to that question".
-      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.
-      AI assistant will not invent anything that is not drawn directly from the context.
-      `,
+        content: "${context}. Provide the response in a html markdown format.",
       },
     ]
 
@@ -46,7 +36,7 @@ export async function POST(req: Request) {
       stream: true,
       messages: [...prompt, ...messages.filter((message: Message) => message.role === 'user')]
     })
-    console.log(response);
+    // console.log(response);
     // Convert the response into a friendly text-stream
     const stream = OpenAIStream(response)
     // Respond with the stream
