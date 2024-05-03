@@ -2,7 +2,7 @@ import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { urls } from "./urls";
 import UrlButton from "./UrlButton";
 import { Card, ICard } from "./Card";
-import { clearIndex, crawlDocument } from "./utils";
+import { addUrl, clearIndex, crawlDocument } from "./utils";
 
 import { Button } from "./Button";
 interface ContextProps {
@@ -13,6 +13,7 @@ interface ContextProps {
 export const Context: React.FC<ContextProps> = ({ className, selected }) => {
   const [entries, setEntries] = useState(urls);
   const [cards, setCards] = useState<ICard[]>([]);
+  const [isFormVisible, setIsFormVisible] = useState(false);
 
   const [splittingMethod, setSplittingMethod] = useState("markdown");
   const [chunkSize, setChunkSize] = useState(256);
@@ -69,7 +70,46 @@ export const Context: React.FC<ContextProps> = ({ className, selected }) => {
           >
             Clear Index
           </Button>
+
+          <div className="flex">
+            <button className="flex-grow bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded mr-2"
+            onClick={() => setIsFormVisible(true)}>
+              Add url
+            </button>
+            
+            <button className="flex-grow bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
+              Remove url
+            </button>
+          </div>
+          <div className="flex self-center">
+            {isFormVisible && (
+                <form onSubmit={addUrl} className="flex-grow text-white font-bold py-2 px-4 rounded">
+                  {/* Add your form inputs here */}
+                  <input type="text" 
+                    className="w-2/3 px-3 py-2 border rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500 mb-2" 
+                    placeholder="Enter label for the url" />
+                    <span className="ml-2">url label</span>
+                  <div></div>
+                  <input type="text" 
+                    className="w-2/3 px-3 py-2 border rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500" 
+                    placeholder="Enter url" />
+                  <span className="ml-2">url link</span>
+                  <div className="flex content-center">
+                    <button className="w-1/4 bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded mr-2 my-2"
+                      type="submit">
+                        Submit
+                    </button>
+                    <button className="w-1/4 bg-red-700 hover:bg-red-900 text-white font-bold py-2 px-4 rounded my-2"
+                      onClick={() => setIsFormVisible(false)}>
+                        Cancel
+                    </button>
+                  </div>
+                  
+                </form>
+              )}
+          </div>
         </div>
+
         <div className="flex p-2"></div>
         <div className="text-left w-full flex flex-col rounded-b-lg bg-gray-600 p-3 subpixel-antialiased">
           <DropdownLabel htmlFor="splittingMethod">

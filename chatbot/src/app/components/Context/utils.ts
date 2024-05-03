@@ -1,5 +1,8 @@
 import { IUrlEntry } from "./UrlButton";
 import { ICard } from "./Card";
+import { client } from "../../utils/redisDb";
+import { useRef } from "react";
+import { redirect } from 'next/navigation'
 
 export async function crawlDocument(
   url: string,
@@ -57,4 +60,33 @@ export async function clearIndex(
     );
     setCards([]);
   }
+}
+
+export async function addUrl(event: React.FormEvent<HTMLFormElement>) {
+  console.log("adding url");
+  const formRef = useRef<HTMLFormElement>(null);
+  event.preventDefault();
+  const formData = new FormData(formRef.current!);
+  var {urlLabel, url} = Object.fromEntries(formData)
+  urlLabel = urlLabel+"";
+  url = url+"";
+  
+    // create a url id
+    const id = Math.floor(Math.random() * 100000)
+  
+    // add the url to the sorted set
+    const unique = await client.zAdd('urls', {
+      value: urlLabel,
+      score: id
+    }, { NX: true })
+  
+    if (!unique) {
+      return {error: 'That book has already been added.'}
+    }
+    
+    // save new hash for the book
+    await client.hSet(`urls:${id}`, {
+      urlLabel,
+      url
+    })
 }
