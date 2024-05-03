@@ -75,18 +75,18 @@ export async function addUrl(event: React.FormEvent<HTMLFormElement>) {
     const id = Math.floor(Math.random() * 100000)
   
     // add the url to the sorted set
-    const unique = await client.zAdd('urls', {
-      value: urlLabel,
-      score: id
-    }, { NX: true })
+    // const unique = await client.zAdd('urls', {
+    //   value: urlLabel,
+    //   score: id
+    // }, { NX: true })
   
-    if (!unique) {
-      return {error: 'That book has already been added.'}
-    }
+    // if (!unique) {
+    //   return {error: 'That url has already been added.'}
+    // }
     
-    // save new hash for the book
-    await client.hSet(`urls:${id}`, {
-      urlLabel,
-      url
-    })
+    // save new hash for the url
+    // await client.hSet(`urls:${id}`, {
+    //   urlLabel,
+    //   url
+    // })
 }
