@@ -23,3 +23,7 @@ The current design uses a template from vercel pinecone https://vercel.com/templ
 
 ### Future scope ▱▱▱▱▱▱▱▱▱
 This can be discussed at a later point.
+
+
+Current App looks like:
+![image](https://github.com/rajeshsatpathy1/ai_scheduler_buddy/assets/21288436/4038bd63-1b63-4cc4-9616-eb385f8e6cde)
